@@ -1,5 +1,6 @@
 import java.util.concurrent.*;
 import java.util.concurrent.ThreadLocalRandom;
+//code
 public class Threadexample {
         static final int CAPACITY=10;
         static final int TYPES_OF_FRUITS=3;
