@@ -14,7 +14,26 @@ public class Producer implements Runnable {
                 this.market = market;
                 number_of_produce=FruitRandomUtil.getFruits(produce);
         }
-
+        
+        public int[] getProduce() {
+			return produce;
+		}
+		public void setProduce(int[] produce) {
+			this.produce = produce;
+		}
+		public int getNumber_of_produce() {
+			return number_of_produce;
+		}
+		public void setNumber_of_produce(int number_of_produce) {
+			this.number_of_produce = number_of_produce;
+		}
+		public String getName() {
+			return Name;
+		}
+		public void setName(String name) {
+			Name = name;
+		}
+		
         @Override
         public void run() {
                                 market.canIsell(number_of_produce,Name);

@@ -4,7 +4,7 @@ import com.accolite.util.FruitConstant;
 public class Market {
     int fruits[];
     int currentNumber;
-    Market()
+    public Market()
     {
         fruits=new int[FruitConstant.TYPES_OF_FRUITS];
         for(int i=0;i<FruitConstant.TYPES_OF_FRUITS;i++)
@@ -12,7 +12,23 @@ public class Market {
         currentNumber=0;
     }
     
-    synchronized boolean canIsell(int n,String Name)
+    public int[] getFruits() {
+		return fruits;
+	}
+
+	public void setFruits(int[] fruits) {
+		this.fruits = fruits;
+	}
+
+	public int getCurrentNumber() {
+		return currentNumber;
+	}
+
+	public void setCurrentNumber(int currentNumber) {
+		this.currentNumber = currentNumber;
+	}
+
+	public synchronized boolean canIsell(int n,String Name)
     {
         try
         {
@@ -29,7 +45,7 @@ public class Market {
     }
     
     
-    synchronized boolean isavailable(int fruit[],String Name)
+    public synchronized boolean isavailable(int fruit[],String Name)
     {
         try{
         for(int i=0;i<FruitConstant.TYPES_OF_FRUITS;i++)
@@ -47,7 +63,7 @@ public class Market {
     }
     
     
-    synchronized void produce(int fruit[],String Name)
+    public synchronized void produce(int fruit[],String Name)
     {
         for(int i=0;i<FruitConstant.TYPES_OF_FRUITS;i++)
             {
@@ -60,7 +76,7 @@ public class Market {
     
     
     
-    synchronized void consume(int fruit[],String Name)
+    public synchronized void consume(int fruit[],String Name)
     {
         for(int i=0;i<FruitConstant.TYPES_OF_FRUITS;i++)
             {
